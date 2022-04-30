@@ -6,7 +6,12 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "lint:style": "stylelint src/**/*.*.scss",
+    "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
+    "lint:style-fix": "npm run lint:style -- --fix",
+    "lint:script-fix": "npm run lint:script -- --fix",
+    "prettier": "prettier -c --write **/*"
   },
   "dependencies": {
     "axios": "^0.27.2",

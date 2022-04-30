@@ -8,8 +8,8 @@ const { count, doubleCount } = storeToRefs(countState);
 <template>
   <main>
     <img src="@assets/images/logo.png" />
-    <p id="count">count is {{ count }}</p>
-    <p id="double_count">double count is {{ doubleCount }}</p>
+    <h1 id="count">count is {{ count }}</h1>
+    <h2 id="double_count">double count is {{ doubleCount }}</h2>
     <div class="btn-group">
       <button id="inc_btn" @click="countState.increment">inc</button>
       <button id="dec_btn" @click="countState.reduce">dec</button>
