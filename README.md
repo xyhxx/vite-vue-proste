@@ -1,8 +1,8 @@
 <img src="https://raw.githubusercontent.com/xyhxx/program_preview/master/logo/vite-vue-proste.png" />
 
-# vite-react-proste
+# vite-vue-proste
 
-Simple, convenient, out of the box, using vite's react template
+Simple, convenient, out of the box, using vite's vue3 template
 
 ## Preview
 
