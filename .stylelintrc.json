@@ -19,6 +19,7 @@
     "declaration-block-no-duplicate-properties": true,
     "no-duplicate-selectors": true,
     "no-descending-specificity": null,
-    "selector-class-pattern": "^([a-z][a-z0-9]*)((-|__)[a-z0-9]+)*$"
+    "selector-class-pattern": "^([a-z][a-z0-9]*)((-|__)[a-z0-9]+)*$",
+    "value-no-vendor-prefix": [true, { "ignoreValues": ["box"] }]
   }
 }
