@@ -6,7 +6,7 @@
       "@assets/*": ["./assets/*"],
       "@routes": ["./routes/index"],
       "@apis": ["./apis/index"],
-      "@components": ["./components/*"],
+      "@components": ["./components/index"],
       "@hooks": ["./hooks/index"],
       "@pages": ["./pages/index"],
       "@pages/*": ["./pages/*"],
