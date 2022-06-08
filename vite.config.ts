@@ -2,9 +2,10 @@ import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
+import vueTypeImports from 'vite-plugin-vue-type-imports';
 
 export default defineConfig({
-  plugins: [vue(), visualizer()],
+  plugins: [vue(), visualizer(), vueTypeImports()],
   test: {
     environment: 'jsdom',
     include: ['__tests__/*.ts', '__tests__/*.{test, spec}.ts'],

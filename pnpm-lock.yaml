@@ -30,6 +30,7 @@ specifiers:
   typescript: ^4.5.4
   veboundary: 1.1.0
   vite: ^2.9.5
+  vite-plugin-vue-type-imports: ^0.2.0
   vitest: ^0.10.0
   vue: ^3.2.35
   vue-eslint-parser: ^9.0.2
@@ -72,6 +73,7 @@ devDependencies:
   stylelint-config-standard-scss: 3.0.0_dpe65nqgyaotuz3e6bsnntwefm
   typescript: 4.6.4
   vite: 2.9.9_sass@1.52.1
+  vite-plugin-vue-type-imports: 0.2.0_vue@3.2.35
   vitest: 0.10.5_jsdom@19.0.0+sass@1.52.1
   vue-eslint-parser: 9.0.2_eslint@8.16.0
   vue-tsc: 0.34.15_typescript@4.6.4
@@ -3317,6 +3319,15 @@ packages:
       '@vue/devtools-api': 6.1.4
       vue: 3.2.35
     dev: false
+
+  /vite-plugin-vue-type-imports/0.2.0_vue@3.2.35:
+    resolution: {integrity: sha512-6rukBj1MP27WfsY5gqMZJg/Z8whK7f9oLbpICBDwzwOK2Oj7KkbP7IgFc2p3qInuB51SvUuxIIcJQVoUPaW6Nw==}
+    peerDependencies:
+      '@vue/compiler-sfc': ^3.2.24
+      vue: ^3.2.24
+    dependencies:
+      vue: 3.2.35
+    dev: true
 
   /vite/2.9.9_sass@1.52.1:
     resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==}
