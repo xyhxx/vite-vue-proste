@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import { router } from '@routes';
-import { VueQueryPlugin, QueryClient } from 'vue-query';
+import { VueQueryPlugin, QueryClient, VueQueryPluginOptions } from 'vue-query';
 import { createPinia } from 'pinia';
 
 import '@styles/global.css';
@@ -16,6 +16,10 @@ const client = new QueryClient({
 
 const app = createApp(App);
 
-app.use(router).use(createPinia()).use(VueQueryPlugin, client);
+const vueQueryOptions: VueQueryPluginOptions = {
+  queryClient: client,
+};
+
+app.use(router).use(createPinia()).use(VueQueryPlugin, vueQueryOptions);
 
 app.mount('#app');
