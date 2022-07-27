@@ -13,6 +13,6 @@
     "project": "./tsconfig.json",
     "tsconfigRootDir": ".",
     "warnOnUnsupportedTypeScriptVersion": true,
-    "extraFileExtensions": [".vue", ".js", ".ts", ".jsx", ".tsx"]
+    "extraFileExtensions": [".vue"]
   }
 }
