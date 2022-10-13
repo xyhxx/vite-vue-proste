@@ -51,8 +51,6 @@ Simple, convenient, out of the box, using vite's vue3 template
 
 ✅ Stylelint
 
-✅ Prettier
-
 ✅ PostCSS
 
 ✅ VeBoundary
@@ -68,8 +66,6 @@ Simple, convenient, out of the box, using vite's vue3 template
 ✅ eslint config(use eslint-config-proste)
 
 ✅ stylelint config
-
-✅ prettier config
 
 ✅ editor config
 

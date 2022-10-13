@@ -1,15 +1,16 @@
 import Home from '@pages/home/index.vue';
 import { mount, VueWrapper } from '@vue/test-utils';
-import { createTestingPinia } from '@pinia/testing';
-import { vi, describe, beforeEach, test, expect } from 'vitest';
+import { describe, beforeEach, test, expect } from 'vitest';
+import { setActivePinia, createPinia } from 'pinia'
+
 
 describe('Home page', function () {
   let app: VueWrapper<any>;
 
+
   beforeEach(function () {
-    app = mount(Home, {
-      plugins: [createTestingPinia({ createSpy: vi.fn })],
-    });
+    setActivePinia(createPinia())
+    app = mount(Home);
   });
 
   test('should render', function () {
