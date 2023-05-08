@@ -15,5 +15,5 @@
   },
   "extends": "./tsconfig.paths.json",
   "include": ["src", "__tests__", "vite.config.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{"path": "./tsconfig.node.json"}]
 }

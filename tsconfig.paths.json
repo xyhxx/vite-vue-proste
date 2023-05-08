@@ -8,9 +8,9 @@
       "@apis": ["./apis/index"],
       "@components": ["./components/index"],
       "@hooks": ["./hooks/index"],
-      "@pages": ["./pages/index"],
       "@pages/*": ["./pages/*"],
       "@stores": ["./stores/index"],
+      "@models": ["./models/index"],
       "@utils": ["./utils/index"]
     }
   }

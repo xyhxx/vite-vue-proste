@@ -1,27 +1,70 @@
-import { defineConfig } from 'vitest/config';
+import {defineConfig} from 'vitest/config';
 import type {PluginOption} from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
-import { visualizer } from 'rollup-plugin-visualizer';
-import vueTypeImports from 'vite-plugin-vue-type-imports';
+import {resolve} from 'path';
+import {visualizer} from 'rollup-plugin-visualizer';
+import postcssNest from 'postcss-nesting';
+import postcssPresetEnv from 'postcss-preset-env';
+import eslint from '@nabla/vite-plugin-eslint';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 
 export default defineConfig({
-  plugins: [vue() as unknown as PluginOption, visualizer() as unknown as PluginOption, vueTypeImports()],
+  define: {
+    'process.env': process.env,
+  },
+  base: './',
+  server: {
+    port: 3000,
+  },
+  build: {
+    target: browserslistToEsbuild(),
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'js/[name].[hash].js',
+        entryFileNames: 'js/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        manualChunks: {
+          vueVendor: ['vue', 'vue-router'],
+        },
+      },
+    },
+  },
+  plugins: [
+    vue(),
+    visualizer({
+      filename: './visualizer/index.html',
+    }) as unknown as PluginOption,
+    eslint(),
+  ],
   test: {
+    include: ['src/**/*.{test, spec}.{js,jsx,ts,tsx}'],
     environment: 'jsdom',
-    include: ['__tests__/*.ts', '__tests__/*.{test, spec}.ts'],
+  },
+  css: {
+    postcss: {
+      plugins: [
+        postcssNest(),
+        postcssPresetEnv({
+          stage: 3,
+          autoprefixer: {
+            flexbox: 'no-2009',
+          },
+        }),
+      ],
+    },
   },
   resolve: {
     alias: {
       '@styles': resolve(__dirname, 'src/styles'),
       '@assets': resolve(__dirname, 'src/assets'),
-      '@routes': resolve(__dirname, 'src/routes/index'),
-      '@apis': resolve(__dirname, 'src/apis/index'),
-      '@components': resolve(__dirname, 'src/components/index'),
-      '@hooks': resolve(__dirname, 'src/hooks/index'),
+      '@routes': resolve(__dirname, 'src/routes'),
+      '@apis': resolve(__dirname, 'src/apis'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
       '@pages': resolve(__dirname, 'src/pages'),
-      '@stores': resolve(__dirname, 'src/stores/index'),
-      '@utils': resolve(__dirname, 'src/utils/index'),
+      '@stores': resolve(__dirname, 'src/stores'),
+      '@models': resolve(__dirname, 'src/models'),
+      '@utils': resolve(__dirname, 'src/utils'),
     },
   },
 });

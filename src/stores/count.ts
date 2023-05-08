@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import {defineStore} from 'pinia';
 
 type CountState = {
   count: number;
@@ -13,7 +13,12 @@ type CountAction = {
   reduce: () => void;
 };
 
-export const useCountState = defineStore<string, CountState, CountGetters, CountAction>('count', {
+export const useCountState = defineStore<
+  string,
+  CountState,
+  CountGetters,
+  CountAction
+>('count', {
   state() {
     return {
       count: 0,

@@ -1,0 +1,54 @@
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #20232a;
+}
+
+.title {
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+}
+
+.name {
+  margin-top: 20px;
+  font-size: 60px;
+  transition: color 500ms;
+}
+
+.icon {
+  display: block;
+  width: 15vw;
+  margin: 80px auto 0;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+  margin: 30px auto 0;
+
+  & button {
+    width: 100px;
+    padding: 6px 0;
+    color: white;
+    cursor: pointer;
+    border: unset;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+      margin-right: 14px;
+      background-color: #43a047;
+    }
+
+    &:nth-child(2) {
+      background-color: #2196f3;
+    }
+  }
+}
+
+.title-red {
+  color: red;
+}
