@@ -40,8 +40,6 @@ Simple, convenient, out of the box, using vite's vue3 template
 
 ✅ Axios
 
-✅ Sass
-
 ✅ Vitest
 
 ✅ vue-test-utils
