@@ -39,6 +39,7 @@ export default defineConfig({
   test: {
     include: ['src/**/*.{test, spec}.{js,jsx,ts,tsx}'],
     environment: 'jsdom',
+    globals: true,
   },
   css: {
     postcss: {

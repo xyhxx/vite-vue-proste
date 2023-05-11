@@ -1,6 +1,5 @@
 import Home from '@pages/home/index.vue';
 import {mount, VueWrapper} from '@vue/test-utils';
-import {describe, beforeEach, test, expect} from 'vitest';
 import {setActivePinia, createPinia} from 'pinia';
 
 describe('Home page', function () {

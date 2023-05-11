@@ -11,9 +11,18 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vitest/globals"]
   },
   "extends": "./tsconfig.paths.json",
-  "include": ["src", "__tests__", "vite.config.ts"],
-  "references": [{"path": "./tsconfig.node.json"}]
+  "include": [
+    "src",
+    "__tests__",
+    "vite.config.ts",
+    "cypress.config.ts",
+    "commitlint.config.js",
+    ".eslintrc.js"
+  ],
+  "references": [{"path": "./tsconfig.node.json"}],
+  "exclude": ["node_modules", "cypress.config.ts"]
 }

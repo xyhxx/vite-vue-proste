@@ -31,10 +31,12 @@ export const useCountState = defineStore<
   },
   actions: {
     increment() {
-      this.count++;
+      this.count =
+        process.env.IS_E2E === 'true' ? this.count + 2 : this.count + 1;
     },
     reduce() {
-      this.count--;
+      this.count =
+        process.env.IS_E2E === 'true' ? this.count - 2 : this.count - 1;
     },
   },
 });
