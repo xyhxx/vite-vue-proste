@@ -54,6 +54,8 @@ Simple, convenient, out of the box, using vite's vue3 template
 
 ✅ VeBoundary
 
+✅ Cypress
+
 ## 🎊Preset
 
 > Alias folders are exported using index
