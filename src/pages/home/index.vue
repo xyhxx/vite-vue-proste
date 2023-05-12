@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import {defineOptions} from 'vue';
 import {useCountState, storeToRefs} from '@stores';

@@ -26,6 +26,10 @@ module.exports = {
     warnOnUnsupportedTypeScriptVersion: true,
     extraFileExtensions: ['.vue'],
   },
+  rules: {
+    // defineOptions is not supported
+    'vue/multi-word-component-names': 0,
+  },
   overrides: [
     {
       files: ['cypress/**', 'cypress.config.ts'],
