@@ -1,5 +1,11 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+import {defineOptions} from 'vue';
 import {useCountState, storeToRefs} from '@stores';
+
+defineOptions({
+  name: 'HomeComponent',
+});
 
 const countState = useCountState();
 const {count} = storeToRefs(countState);
@@ -17,12 +23,6 @@ const {count} = storeToRefs(countState);
     </div>
   </main>
 </template>
-
-<script lang="ts">
-export default {
-  name: 'HomeComponent',
-};
-</script>
 
 <style scoped lang="css">
 @import './index.css';
