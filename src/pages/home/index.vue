@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import {defineOptions} from 'vue';
 import {useCountState, storeToRefs} from '@stores';
+
+defineProps<{id: string}>();
 
 defineOptions({
   name: 'HomeComponent',

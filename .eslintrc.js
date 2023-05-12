@@ -17,6 +17,8 @@ module.exports = {
     afterAll: true,
     beforeEach: true,
     afterEach: true,
+    // wait vue-eslint-parer support
+    defineOptions: true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
