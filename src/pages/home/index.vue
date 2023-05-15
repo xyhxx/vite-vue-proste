@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {defineOptions} from 'vue';
 import {useCountState, storeToRefs} from '@stores';
 
 defineOptions({
@@ -14,7 +13,7 @@ const {count} = storeToRefs(countState);
   <main>
     <img src="@assets/images/logo.png" class="icon" />
     <h1 id="count" :class="['title', 'name', {'title-red': count > 5}]">
-      count is {{ count }}
+      count is {{count}}
     </h1>
     <div class="btn-group">
       <button id="inc_btn" @click="countState.increment">inc</button>

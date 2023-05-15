@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'proste/typescript.js',
     'plugin:vue/vue3-recommended',
-    'eslint-config-prettier',
   ],
   globals: {
     suite: true,
@@ -18,6 +17,24 @@ module.exports = {
     beforeEach: true,
     afterEach: true,
   },
+  rules: {
+    // wait vue eslint config
+    'vue/multi-word-component-names': 0,
+    'vue/html-self-closing': [
+      2, {
+        html: {
+          void: 'always',
+          normal: 'always',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
+      },
+    ],
+    'vue/max-attributes-per-line': 0,
+    'vue/singleline-html-element-content-newline': 0,
+    'vue/mustache-interpolation-spacing': [1, 'never'],
+  },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -25,10 +42,6 @@ module.exports = {
     tsconfigRootDir: '.',
     warnOnUnsupportedTypeScriptVersion: true,
     extraFileExtensions: ['.vue'],
-  },
-  rules: {
-    // defineOptions is not supported
-    'vue/multi-word-component-names': 0,
   },
   overrides: [
     {
