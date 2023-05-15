@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@tanstack/vue-query':
-    specifier: ^4.29.5
-    version: 4.29.5(vue@3.3.2)
+    specifier: ^4.29.7
+    version: 4.29.7(vue@3.3.2)
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -81,6 +81,9 @@ devDependencies:
   eslint-plugin-import:
     specifier: ^2.27.5
     version: 2.27.5(@typescript-eslint/parser@5.59.5)(eslint@8.40.0)
+  eslint-plugin-import-newlines:
+    specifier: ^1.3.1
+    version: 1.3.1(eslint@8.40.0)
   eslint-plugin-vue:
     specifier: ^9.12.0
     version: 9.12.0(eslint@8.40.0)
@@ -1030,12 +1033,12 @@ packages:
       remove-accents: 0.4.2
     dev: false
 
-  /@tanstack/query-core@4.29.5:
-    resolution: {integrity: sha512-xXIiyQ/4r9KfaJ3k6kejqcaqFXXBTzN2aOJ5H1J6aTJE9hl/nbgAdfF6oiIu0CD5xowejJEJ6bBg8TO7BN4NuQ==}
+  /@tanstack/query-core@4.29.7:
+    resolution: {integrity: sha512-GXG4b5hV2Loir+h2G+RXhJdoZhJLnrBWsuLB2r0qBRyhWuXq9w/dWxzvpP89H0UARlH6Mr9DiVj4SMtpkF/aUA==}
     dev: false
 
-  /@tanstack/vue-query@4.29.5(vue@3.3.2):
-    resolution: {integrity: sha512-o5EqXKG/SbOcqDxc0LHNMQvB/77dFTRL9EdfFKXUHGIFGhKDhuiA0ByT/HydzXWzj7oGj44ovosAusej90yKVg==}
+  /@tanstack/vue-query@4.29.7(vue@3.3.2):
+    resolution: {integrity: sha512-dVk2s5zcEtkDiNV4EFvKRiTnldNCcWh4P57QmxuBNZrJ2bncumVoWO1PAO8uPfucHV0qZtFWDyzXzHyrdkHK7g==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^2.5.0 || ^3.0.0
@@ -1044,7 +1047,7 @@ packages:
         optional: true
     dependencies:
       '@tanstack/match-sorter-utils': 8.8.4
-      '@tanstack/query-core': 4.29.5
+      '@tanstack/query-core': 4.29.7
       '@vue/devtools-api': 6.5.0
       vue: 3.3.2
       vue-demi: 0.13.11(vue@3.3.2)
@@ -2369,8 +2372,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /cssdb@7.5.4:
-    resolution: {integrity: sha512-fGD+J6Jlq+aurfE1VDXlLS4Pt0VtNlu2+YgfGOdMxRyl/HQ9bDiHTwSck1Yz8A97Dt/82izSK6Bp/4nVqacOsg==}
+  /cssdb@7.6.0:
+    resolution: {integrity: sha512-Nna7rph8V0jC6+JBY4Vk4ndErUmfJfV6NJCaZdurL0omggabiy+QB2HCQtu5c/ACLZ0I7REv7A4QyPIoYzZx0w==}
     dev: true
 
   /cssesc@3.0.0:
@@ -2896,6 +2899,16 @@ packages:
     dependencies:
       eslint: 8.40.0
       globals: 11.12.0
+    dev: true
+
+  /eslint-plugin-import-newlines@1.3.1(eslint@8.40.0):
+    resolution: {integrity: sha512-7vyhwliGm+CTwteRw2ym+IO9OaksGYmSt63elPPBM0QJ3zwRwMKtgHOSHVtdHlrSERRTVCsWtMO8dDdAdmHMXg==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      eslint: 8.40.0
     dev: true
 
   /eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.59.5)(eslint@8.40.0):
@@ -5310,7 +5323,7 @@ packages:
       css-blank-pseudo: 5.0.2(postcss@8.4.23)
       css-has-pseudo: 5.0.2(postcss@8.4.23)
       css-prefers-color-scheme: 8.0.2(postcss@8.4.23)
-      cssdb: 7.5.4
+      cssdb: 7.6.0
       postcss: 8.4.23
       postcss-attribute-case-insensitive: 6.0.2(postcss@8.4.23)
       postcss-clamp: 4.1.0(postcss@8.4.23)
