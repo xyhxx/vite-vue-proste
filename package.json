@@ -11,7 +11,7 @@
     "cypress:run": "cypress run -b chrome",
     "cypress": "cypress open",
     "lint:style": "stylelint packages/app/src *.*.css",
-    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
     "lint:style-fix": "pnpm run lint:style --fix",
     "lint:js-fix": "pnpm run lint:js --fix",
     "prettier": "prettier -c --write **/*",
