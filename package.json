@@ -75,7 +75,7 @@
     "**/*/*.css": [
       "stylelint"
     ],
-    "**/*/*.{js,jsx,ts,tsx,.vue}": [
+    "**/*/*.{js,jsx,ts,tsx,vue}": [
       "eslint"
     ]
   },
