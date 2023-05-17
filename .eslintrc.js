@@ -1,8 +1,7 @@
 module.exports = {
   extends: [
-    'proste/typescript.js',
-    'plugin:vue/vue3-recommended',
-    'eslint-config-prettier',
+    'proste/typescript',
+    'proste/vue',
   ],
   globals: {
     suite: true,
@@ -27,10 +26,6 @@ module.exports = {
     tsconfigRootDir: '.',
     warnOnUnsupportedTypeScriptVersion: true,
     extraFileExtensions: ['.vue'],
-  },
-  rules: {
-    // defineOptions is not supported
-    'vue/multi-word-component-names': 0,
   },
   overrides: [
     {

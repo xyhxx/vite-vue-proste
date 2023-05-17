@@ -14,10 +14,10 @@ type CountAction = {
 };
 
 export const useCountState = defineStore<
-  string,
-  CountState,
-  CountGetters,
-  CountAction
+string,
+CountState,
+CountGetters,
+CountAction
 >('count', {
   state() {
     return {
@@ -31,12 +31,12 @@ export const useCountState = defineStore<
   },
   actions: {
     increment() {
-      this.count =
-        process.env.IS_E2E === 'true' ? this.count + 2 : this.count + 1;
+      this.count
+        = process.env.IS_E2E === 'true' ? this.count + 2 : this.count + 1;
     },
     reduce() {
-      this.count =
-        process.env.IS_E2E === 'true' ? this.count - 2 : this.count - 1;
+      this.count
+        = process.env.IS_E2E === 'true' ? this.count - 2 : this.count - 1;
     },
   },
 });
