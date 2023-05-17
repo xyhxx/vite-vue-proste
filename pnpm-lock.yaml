@@ -70,8 +70,8 @@ devDependencies:
     specifier: ^8.40.0
     version: 8.40.0
   eslint-config-proste:
-    specifier: ^6.3.0
-    version: 6.3.0(@typescript-eslint/eslint-plugin@5.59.5)(@typescript-eslint/parser@5.59.5)(eslint-plugin-import-newlines@1.3.1)(eslint-plugin-import@2.27.5)(eslint-plugin-vue@9.13.0)(eslint@8.40.0)
+    specifier: ^7.0.0
+    version: 7.0.0(@typescript-eslint/eslint-plugin@5.59.5)(@typescript-eslint/parser@5.59.5)(eslint-plugin-import-newlines@1.3.1)(eslint-plugin-import@2.27.5)(eslint-plugin-vue@9.13.0)(eslint@8.40.0)
   eslint-plugin-cypress:
     specifier: ^2.13.3
     version: 2.13.3(eslint@8.40.0)
@@ -2825,8 +2825,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-proste@6.3.0(@typescript-eslint/eslint-plugin@5.59.5)(@typescript-eslint/parser@5.59.5)(eslint-plugin-import-newlines@1.3.1)(eslint-plugin-import@2.27.5)(eslint-plugin-vue@9.13.0)(eslint@8.40.0):
-    resolution: {integrity: sha512-sH6NsWQyMfuBwACGdhaFEcAhqr7guL4XvbzBit7kdooT/N6DMAFImo5hIGTjPSt8MrCpOsu1xbV0HsVcGvIozA==}
+  /eslint-config-proste@7.0.0(@typescript-eslint/eslint-plugin@5.59.5)(@typescript-eslint/parser@5.59.5)(eslint-plugin-import-newlines@1.3.1)(eslint-plugin-import@2.27.5)(eslint-plugin-vue@9.13.0)(eslint@8.40.0):
+    resolution: {integrity: sha512-jBLmB3zyJTPthGHxrly1IwUKN93qTprpvGWn6OBSFvlpOa6DsXje8W2vN3uMzgErqrnsmY8XzhXbh0cTADi/ig==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '>=5.4.0'
       '@typescript-eslint/parser': '>=5.4.0'
