@@ -7,6 +7,7 @@ import postcssNest from 'postcss-nesting';
 import postcssPresetEnv from 'postcss-preset-env';
 import eslint from '@nabla/vite-plugin-eslint';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
+import jsxPlugin from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
   define: {
@@ -35,6 +36,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    jsxPlugin(),
     visualizer({
       filename: './visualizer/index.html',
     }) as unknown as PluginOption,
@@ -44,6 +46,9 @@ export default defineConfig({
     include: ['src/**/*.{test, spec}.{js,jsx,ts,tsx}'],
     environment: 'jsdom',
     globals: true,
+    transformMode: {
+      web: [/.[tj]sx$/],
+    },
   },
   css: {
     postcss: {

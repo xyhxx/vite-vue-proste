@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import {useCountState, storeToRefs} from '@stores';
+import {Button} from '@components';
 
 defineOptions({
   name: 'Home',
@@ -16,8 +17,8 @@ const {count} = storeToRefs(countState);
       count is {{count}}
     </h1>
     <div class="btn-group">
-      <button id="inc_btn" @click="countState.increment">inc</button>
-      <button id="dec_btn" @click="countState.reduce">dec</button>
+      <Button id="inc_btn" @click="countState.increment">inc</Button>
+      <Button id="dec_btn" @click="countState.reduce">dec</Button>
     </div>
   </main>
 </template>
