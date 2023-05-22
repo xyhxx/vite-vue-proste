@@ -20,17 +20,21 @@ describe('Home page', function() {
     const decBtn = app.get('#dec_btn');
 
     expect(app.get('#count').text()).toBe('count is 0');
+    expect(app.get('#double_count').text()).toBe('double count is 0');
 
     await incBtn.trigger('click');
 
     expect(app.get('#count').text()).toBe('count is 1');
+    expect(app.get('#double_count').text()).toBe('double count is 2');
 
     await incBtn.trigger('click');
 
     expect(app.get('#count').text()).toBe('count is 2');
+    expect(app.get('#double_count').text()).toBe('double count is 4');
 
     await decBtn.trigger('click');
 
     expect(app.get('#count').text()).toBe('count is 1');
+    expect(app.get('#double_count').text()).toBe('double count is 2');
   });
 });
