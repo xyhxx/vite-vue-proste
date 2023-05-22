@@ -1,54 +1,59 @@
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-color: #20232a;
+  background-color: #eee;
+
+  & img {
+    width: 100px;
+    margin-bottom: 80px;
+    animation: heart 3s ease-in-out infinite;
+  }
 }
 
-.title {
-  margin-top: 80px;
-  color: white;
+p {
   text-align: center;
 }
 
-.name {
-  margin-top: 20px;
-  font-size: 60px;
-  transition: color 500ms;
+h1 {
+  color: #7cb342;
 }
 
-.icon {
-  display: block;
-  width: 15vw;
-  margin: 80px auto 0;
+h2 {
+  color: #009688;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: #455a64;
+  border: none;
+  border-radius: 6px;
 }
 
 .btn-group {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 200px;
-  margin: 30px auto 0;
-
-  & button {
-    width: 100px;
-    padding: 6px 0;
-    color: white;
-    cursor: pointer;
-    border: unset;
-    border-radius: 4px;
-
-    &:nth-child(1) {
-      margin-right: 14px;
-      background-color: #43a047;
-    }
-
-    &:nth-child(2) {
-      background-color: #2196f3;
-    }
-  }
+  justify-content: space-between;
+  width: 400px;
+  margin: 60px auto 0;
 }
 
-.title-red {
-  color: red;
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

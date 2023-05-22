@@ -1,24 +1,23 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import {useCountState, storeToRefs} from '@stores';
-import {Button} from '@components';
+import {DemoButton} from '@components';
 
 defineOptions({
-  name: 'Home',
+  name: 'HomeComponent',
 });
 
 const countState = useCountState();
-const {count} = storeToRefs(countState);
+const {count, doubleCount} = storeToRefs(countState);
 </script>
 
 <template>
   <main>
-    <img src="@assets/images/logo.png" class="icon" />
-    <h1 id="count" :class="['title','name', {'title-red': count > 5}]">
-      count is {{count}}
-    </h1>
+    <img src="@assets/images/logo.png" />
+    <h1 id="count">count is {{count}}</h1>
+    <h2 id="double_count">double count is {{doubleCount}}</h2>
     <div class="btn-group">
-      <Button id="inc_btn" @click="countState.increment">inc</Button>
-      <Button id="dec_btn" @click="countState.reduce">dec</Button>
+      <DemoButton id="inc_btn" @click="countState.increment">inc</DemoButton>
+      <DemoButton id="dec_btn" @click="countState.reduce">dec</DemoButton>
     </div>
   </main>
 </template>
