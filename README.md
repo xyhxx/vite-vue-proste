@@ -11,7 +11,7 @@ Simple, convenient, out of the box, using vite's vue3 template
 ## Usage
 
 - Clone this repo, like
-  `git clone https://https://github.com/xyhxx/vite-vue-proste`. In addition, you
+  `git clone https://github.com/xyhxx/vite-vue-proste`. In addition, you
   can click "Use this template" to copy this template to your repositories,or
   use <a href="https://github.com/Rich-Harris/degit">degit</a>.
 
