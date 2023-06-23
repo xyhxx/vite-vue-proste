@@ -4,6 +4,7 @@ module.exports = {
     'proste/vue',
     'proste/vitest',
   ],
+  plugins: ['xyhxx'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -11,6 +12,10 @@ module.exports = {
     tsconfigRootDir: '.',
     warnOnUnsupportedTypeScriptVersion: true,
     extraFileExtensions: ['.vue'],
+  },
+  rules: {
+    'xyhxx/if-line': 1,
+    'xyhxx/object-pattern-newline': 1,
   },
   overrides: [
     {
