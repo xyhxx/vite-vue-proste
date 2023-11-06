@@ -6,13 +6,9 @@ export default defineComponent({
     onClick: Function as PropType<(e: MouseEvent) => void>,
   },
   slots: Object as SlotsType<{
-    default: string | undefined
+    default: string | undefined;
   }>,
   setup(props, {slots}) {
-    return () => (
-      <button onClick={props.onClick}>
-        {slots.default?.()}
-      </button>
-    );
+    return () => <button onClick={props.onClick}>{slots.default?.()}</button>;
   },
 });
